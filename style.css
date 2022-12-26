@@ -1,0 +1,116 @@
+/* Bass information like fonts and colors */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --Softblue:hsl(215, 51%, 70%);
+    --Cyan:hsl(178, 100%, 50%);
+    --Overlay: hsla(178,100%,50%,0.5);
+    --mainBG:hsl(217, 54%, 11%);
+    --cardBG:hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White:hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--mainBG);
+}
+.container{
+    max-width: 350px;
+    margin: 0 auto;
+}
+.wrapper{
+    margin: 2rem 1rem ;
+    padding: 20px;
+    background-color: var(--cardBG);
+    border-radius: 15px;
+} 
+.img-top {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+.img-top img{
+    width: 100%;
+    display: block;
+}
+.overlay{
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 100%;
+    width:100%;
+    background-color: var(--Overlay);
+    display: none;
+}
+.overlay img{
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.img-top:hover .overlay{
+    display: block;
+    cursor: pointer;
+}
+.box-text a{
+    color: var(--White);
+    text-decoration: none;
+    font-weight: 600px;
+    font-size:21px;
+    padding: 20px 0;
+    display: inline-block;
+}
+.box-text a:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+p{
+    color:var(--Softblue);
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.eth, .days {
+    display: flex;
+    align-items: center;
+}
+.eth p{
+    color: var(--Cyan);
+    font-weight: 600;
+    padding-left: 7px;
+}
+.days p {
+    padding-left: 7px;
+}
+hr{
+    border-color: var(--line);
+}
+.author{
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+.author img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--White);
+    margin-right: 15px;
+}
+.author p a {
+    color:var(--White);
+    font-size: 16px;
+
+}
